@@ -6,7 +6,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git@github.com:maxenglander/decisionlog"
+    "url": "git://github.com/maxenglander/decisionlog"
   },
   "dependencies": {
       "amdefine": "0.0.5"
@@ -19,7 +19,7 @@
   },
   "optionalDependencies": {},
   "scripts": {
-      "pretest": "cake test"
+      "pretest": "cake compile",
       "test": "mocha --compilers coffee:coffee-script --globals define,requirejs --recursive --require spec/helper.js spec/**/*.coffee"
   },
   "engines": {
