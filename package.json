@@ -9,8 +9,8 @@
     "url": "git://github.com/maxenglander/decisionlog"
   },
   "dependencies": {
-      "amdefine": "0.0.5"
-      "coffee-script": "1.6.3",
+      "amdefine": "0.0.5",
+      "coffee-script": "1.6.3"
   },
   "devDependencies": {
       "mocha": "1.10.0",
