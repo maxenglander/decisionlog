@@ -19,10 +19,12 @@
   },
   "optionalDependencies": {},
   "scripts": {
+      "prepublish": "cake compile",
       "pretest": "cake compile",
       "test": "mocha --compilers coffee:coffee-script --globals define,requirejs --recursive --require spec/helper.js spec/**/*.coffee"
   },
   "engines": {
     "node": "*"
-  }
+  },
+  "private": true
 }
