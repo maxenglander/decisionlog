@@ -1,0 +1,28 @@
+{
+  "author": "Max Englander <max.englander@gmail.com> (http://maxenglander.com)",
+  "name": "decisionlog-core",
+  "description": "A tool for tracking and evaluating decisions",
+  "version": "0.0.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:maxenglander/decisionlog"
+  },
+  "dependencies": {
+      "amdefine": "0.0.5"
+  },
+  "devDependencies": {
+      "coffee-script": "1.6.3",
+      "mocha": "1.10.0",
+      "requirejs": "2.1.6"
+          
+  },
+  "optionalDependencies": {},
+  "scripts": {
+      "pretest": "cake test"
+      "test": "mocha --compilers coffee:coffee-script --globals define,requirejs --recursive --require spec/helper.js spec/**/*.coffee"
+  },
+  "engines": {
+    "node": "*"
+  }
+}
