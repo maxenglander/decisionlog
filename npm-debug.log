@@ -1,0 +1,144 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'publish' ]
+2 info using npm@1.2.18
+3 info using node@v0.10.5
+4 verbose publish [ '.' ]
+5 verbose read json /home/squarkle/devel/decisionlog/decisionlog-core/package.json
+6 verbose cache add [ '.', null ]
+7 verbose cache add name=undefined spec="." args=[".",null]
+8 verbose parsed url { protocol: null,
+8 verbose parsed url   slashes: null,
+8 verbose parsed url   auth: null,
+8 verbose parsed url   host: null,
+8 verbose parsed url   port: null,
+8 verbose parsed url   hostname: null,
+8 verbose parsed url   hash: null,
+8 verbose parsed url   search: null,
+8 verbose parsed url   query: null,
+8 verbose parsed url   pathname: '.',
+8 verbose parsed url   path: '.',
+8 verbose parsed url   href: '.' }
+9 silly lockFile 3a52ce78- .
+10 verbose lock . /home/squarkle/.npm/3a52ce78-.lock
+11 verbose read json package.json
+12 verbose tar pack [ '/home/squarkle/tmp/npm-4286/1370196874302-0.88490508380346/tmp.tgz',
+12 verbose tar pack   '.' ]
+13 verbose tarball /home/squarkle/tmp/npm-4286/1370196874302-0.88490508380346/tmp.tgz
+14 verbose folder .
+15 info prepublish decisionlog-core@0.0.0
+16 verbose unsafe-perm in lifecycle true
+17 silly exec sh "-c" "cake compile"
+18 silly sh,-c,cake compile,. spawning
+19 silly lockFile 3a52ce78- .
+20 verbose lock . /home/squarkle/.npm/3a52ce78-.lock
+21 silly lockFile 89f8abae-6874302-0-88490508380346-tmp-tgz /home/squarkle/tmp/npm-4286/1370196874302-0.88490508380346/tmp.tgz
+22 verbose lock /home/squarkle/tmp/npm-4286/1370196874302-0.88490508380346/tmp.tgz /home/squarkle/.npm/89f8abae-6874302-0-88490508380346-tmp-tgz.lock
+23 silly lockFile 3a52ce78- .
+24 silly lockFile 3a52ce78- .
+25 silly lockFile 89f8abae-6874302-0-88490508380346-tmp-tgz /home/squarkle/tmp/npm-4286/1370196874302-0.88490508380346/tmp.tgz
+26 silly lockFile 89f8abae-6874302-0-88490508380346-tmp-tgz /home/squarkle/tmp/npm-4286/1370196874302-0.88490508380346/tmp.tgz
+27 verbose tar unpack /home/squarkle/tmp/npm-4286/1370196874302-0.88490508380346/tmp.tgz
+28 silly lockFile 75f0feb7-6874302-0-88490508380346-package /home/squarkle/tmp/npm-4286/1370196874302-0.88490508380346/package
+29 verbose lock /home/squarkle/tmp/npm-4286/1370196874302-0.88490508380346/package /home/squarkle/.npm/75f0feb7-6874302-0-88490508380346-package.lock
+30 silly lockFile 89f8abae-6874302-0-88490508380346-tmp-tgz /home/squarkle/tmp/npm-4286/1370196874302-0.88490508380346/tmp.tgz
+31 verbose lock /home/squarkle/tmp/npm-4286/1370196874302-0.88490508380346/tmp.tgz /home/squarkle/.npm/89f8abae-6874302-0-88490508380346-tmp-tgz.lock
+32 silly gunzTarPerm modes [ '755', '644' ]
+33 silly gunzTarPerm extractEntry package.json
+34 silly gunzTarPerm extractEntry .npmignore
+35 silly gunzTarPerm extractEntry README.md
+36 silly gunzTarPerm extractEntry Cakefile
+37 silly gunzTarPerm extractEntry lib/decisionlog/core/model/entry.js
+38 silly gunzTarPerm extractEntry spec/helper.js
+39 silly gunzTarPerm extractEntry spec/model/entry.coffee
+40 verbose read json /home/squarkle/tmp/npm-4286/1370196874302-0.88490508380346/package/package.json
+41 silly lockFile 75f0feb7-6874302-0-88490508380346-package /home/squarkle/tmp/npm-4286/1370196874302-0.88490508380346/package
+42 silly lockFile 75f0feb7-6874302-0-88490508380346-package /home/squarkle/tmp/npm-4286/1370196874302-0.88490508380346/package
+43 silly lockFile 89f8abae-6874302-0-88490508380346-tmp-tgz /home/squarkle/tmp/npm-4286/1370196874302-0.88490508380346/tmp.tgz
+44 silly lockFile 89f8abae-6874302-0-88490508380346-tmp-tgz /home/squarkle/tmp/npm-4286/1370196874302-0.88490508380346/tmp.tgz
+45 verbose from cache /home/squarkle/tmp/npm-4286/1370196874302-0.88490508380346/package/package.json
+46 verbose tar pack [ '/home/squarkle/.npm/decisionlog-core/0.0.0/package.tgz',
+46 verbose tar pack   '/home/squarkle/tmp/npm-4286/1370196874302-0.88490508380346/package' ]
+47 verbose tarball /home/squarkle/.npm/decisionlog-core/0.0.0/package.tgz
+48 verbose folder /home/squarkle/tmp/npm-4286/1370196874302-0.88490508380346/package
+49 silly lockFile 75f0feb7-6874302-0-88490508380346-package /home/squarkle/tmp/npm-4286/1370196874302-0.88490508380346/package
+50 verbose lock /home/squarkle/tmp/npm-4286/1370196874302-0.88490508380346/package /home/squarkle/.npm/75f0feb7-6874302-0-88490508380346-package.lock
+51 silly lockFile 210d9be9-cisionlog-core-0-0-0-package-tgz /home/squarkle/.npm/decisionlog-core/0.0.0/package.tgz
+52 verbose lock /home/squarkle/.npm/decisionlog-core/0.0.0/package.tgz /home/squarkle/.npm/210d9be9-cisionlog-core-0-0-0-package-tgz.lock
+53 silly lockFile 75f0feb7-6874302-0-88490508380346-package /home/squarkle/tmp/npm-4286/1370196874302-0.88490508380346/package
+54 silly lockFile 75f0feb7-6874302-0-88490508380346-package /home/squarkle/tmp/npm-4286/1370196874302-0.88490508380346/package
+55 silly lockFile 210d9be9-cisionlog-core-0-0-0-package-tgz /home/squarkle/.npm/decisionlog-core/0.0.0/package.tgz
+56 silly lockFile 210d9be9-cisionlog-core-0-0-0-package-tgz /home/squarkle/.npm/decisionlog-core/0.0.0/package.tgz
+57 silly lockFile 8527bec6-m-decisionlog-core-0-0-0-package /home/squarkle/.npm/decisionlog-core/0.0.0/package
+58 verbose lock /home/squarkle/.npm/decisionlog-core/0.0.0/package /home/squarkle/.npm/8527bec6-m-decisionlog-core-0-0-0-package.lock
+59 silly lockFile 8527bec6-m-decisionlog-core-0-0-0-package /home/squarkle/.npm/decisionlog-core/0.0.0/package
+60 silly lockFile 8527bec6-m-decisionlog-core-0-0-0-package /home/squarkle/.npm/decisionlog-core/0.0.0/package
+61 verbose tar unpack /home/squarkle/.npm/decisionlog-core/0.0.0/package.tgz
+62 silly lockFile 8527bec6-m-decisionlog-core-0-0-0-package /home/squarkle/.npm/decisionlog-core/0.0.0/package
+63 verbose lock /home/squarkle/.npm/decisionlog-core/0.0.0/package /home/squarkle/.npm/8527bec6-m-decisionlog-core-0-0-0-package.lock
+64 silly lockFile 210d9be9-cisionlog-core-0-0-0-package-tgz /home/squarkle/.npm/decisionlog-core/0.0.0/package.tgz
+65 verbose lock /home/squarkle/.npm/decisionlog-core/0.0.0/package.tgz /home/squarkle/.npm/210d9be9-cisionlog-core-0-0-0-package-tgz.lock
+66 silly gunzTarPerm modes [ '755', '644' ]
+67 silly gunzTarPerm extractEntry package.json
+68 silly gunzTarPerm extractEntry .npmignore
+69 silly gunzTarPerm extractEntry README.md
+70 silly gunzTarPerm extractEntry Cakefile
+71 silly gunzTarPerm extractEntry lib/decisionlog/core/model/entry.js
+72 silly gunzTarPerm extractEntry spec/helper.js
+73 silly gunzTarPerm extractEntry spec/model/entry.coffee
+74 verbose read json /home/squarkle/.npm/decisionlog-core/0.0.0/package/package.json
+75 silly lockFile 8527bec6-m-decisionlog-core-0-0-0-package /home/squarkle/.npm/decisionlog-core/0.0.0/package
+76 silly lockFile 8527bec6-m-decisionlog-core-0-0-0-package /home/squarkle/.npm/decisionlog-core/0.0.0/package
+77 silly lockFile 210d9be9-cisionlog-core-0-0-0-package-tgz /home/squarkle/.npm/decisionlog-core/0.0.0/package.tgz
+78 silly lockFile 210d9be9-cisionlog-core-0-0-0-package-tgz /home/squarkle/.npm/decisionlog-core/0.0.0/package.tgz
+79 silly shasum updated bytes 1113
+80 info shasum dc69ddc0696874c3643c01279da9e7909a823729
+80 info shasum /home/squarkle/.npm/decisionlog-core/0.0.0/package.tgz
+81 verbose from cache /home/squarkle/.npm/decisionlog-core/0.0.0/package/package.json
+82 verbose chmod /home/squarkle/.npm/decisionlog-core/0.0.0/package.tgz 644
+83 verbose chown /home/squarkle/.npm/decisionlog-core/0.0.0/package.tgz [ 1000, 100 ]
+84 silly lockFile 3a52ce78- .
+85 silly publish { author:
+85 silly publish    { name: 'Max Englander',
+85 silly publish      email: 'max.englander@gmail.com',
+85 silly publish      url: 'http://maxenglander.com' },
+85 silly publish   name: 'decisionlog-core',
+85 silly publish   description: 'A tool for tracking and evaluating decisions',
+85 silly publish   version: '0.0.0',
+85 silly publish   license: 'MIT',
+85 silly publish   repository:
+85 silly publish    { type: 'git',
+85 silly publish      url: 'git://github.com/maxenglander/decisionlog' },
+85 silly publish   dependencies: { amdefine: '0.0.5' },
+85 silly publish   devDependencies: { 'coffee-script': '1.6.3', mocha: '1.10.0', requirejs: '2.1.6' },
+85 silly publish   optionalDependencies: {},
+85 silly publish   scripts:
+85 silly publish    { prepublish: 'cake compile',
+85 silly publish      pretest: 'cake compile',
+85 silly publish      test: 'mocha --compilers coffee:coffee-script --globals define,requirejs --recursive --require spec/helper.js spec/**/*.coffee' },
+85 silly publish   engines: { node: '*' },
+85 silly publish   private: true,
+85 silly publish   readme: 'decisionlog-core\n===============\n',
+85 silly publish   readmeFilename: 'README.md',
+85 silly publish   _id: 'decisionlog-core@0.0.0',
+85 silly publish   dist: { shasum: 'dc69ddc0696874c3643c01279da9e7909a823729' },
+85 silly publish   _from: '.' }
+86 error Error: This package has been marked as private
+86 error Remove the 'private' field from the package.json to publish it.
+86 error     at publish_ (/usr/lib64/node_modules/npm/lib/publish.js:90:31)
+86 error     at Array.1 (/usr/lib64/node_modules/npm/node_modules/slide/lib/bind-actor.js:15:8)
+86 error     at LOOP (/usr/lib64/node_modules/npm/node_modules/slide/lib/chain.js:15:14)
+86 error     at LOOP (/usr/lib64/node_modules/npm/node_modules/slide/lib/chain.js:14:28)
+86 error     at chain (/usr/lib64/node_modules/npm/node_modules/slide/lib/chain.js:20:5)
+86 error     at /usr/lib64/node_modules/npm/lib/publish.js:59:5
+86 error     at /usr/lib64/node_modules/npm/lib/cache.js:775:14
+86 error     at process._tickCallback (node.js:415:13)
+87 error If you need help, you may report this log at:
+87 error     <http://github.com/isaacs/npm/issues>
+87 error or email it to:
+87 error     <npm-@googlegroups.com>
+88 error System Linux 3.0.6-gentoo
+89 error command "/usr/bin/node" "/usr/bin/npm" "publish"
+90 error cwd /home/squarkle/devel/decisionlog/decisionlog-core
+91 error node -v v0.10.5
+92 error npm -v 1.2.18
+93 verbose exit [ 1, true ]
