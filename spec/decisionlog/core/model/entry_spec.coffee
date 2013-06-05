@@ -1,4 +1,4 @@
-import { Entry } from "../../../../lib/decisionlog/core/model/entry"
+import { Entry } from "./entry"
 import "assert" as assert
 
 describe 'Entry', ->

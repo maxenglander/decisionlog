@@ -1,3 +1,5 @@
 build/
+Gruntfile.coffee
 *.log
+spec/
 src/
