@@ -48,4 +48,6 @@ module.exports = (grunt) ->
                     dest: 'build/coffee'
                 } ]
 
-    grunt.registerTask 'release', [ 'clean', 'transpile', 'coffee', 'simplemocha', 'copy' ]
+    grunt.registerTask 'build', [ 'clean', 'transpile', 'coffee' ]
+    grunt.registerTask 'release', [ 'clean', 'build', 'copy' ]
+    grunt.registerTask 'test', [ 'clean', 'transpile', 'coffee', 'simplemocha' ]
