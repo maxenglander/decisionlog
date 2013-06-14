@@ -20,6 +20,7 @@
   },
   "optionalDependencies": {},
   "scripts": {
+    "prepublish": "grunt release",
     "test": "grunt test"
   },
   "engines": {

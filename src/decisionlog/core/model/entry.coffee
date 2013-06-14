@@ -1,9 +1,8 @@
 class Entry
-    constructor: (@id, @logId, @question, @answer, @state) ->
+    constructor: (@id, @question, @answer, @createdAt) ->
     getAnswer: -> return @answer
+    getCreatedAt: -> return @createdAt
     getId: -> return @id
-    getLogId: -> return @logId
     getQuestion: -> return @question
-    getState: -> return @state
 
 export Entry
