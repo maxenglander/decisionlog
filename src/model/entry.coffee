@@ -5,4 +5,4 @@ class Entry
     getId: -> return @id
     getQuestion: -> return @question
 
-export Entry
+export = Entry

@@ -1,4 +1,4 @@
-import { Entry } from "./entry"
+import "./entry" as Entry
 import "assert" as assert
 
 describe 'Entry', ->

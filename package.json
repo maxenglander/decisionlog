@@ -2,7 +2,7 @@
   "author": "Max Englander <max.englander@gmail.com> (http://maxenglander.com)",
   "name": "decisionlog-core",
   "description": "A tool for tracking and evaluating decisions",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "BSD",
   "repository": {
     "type": "git",
@@ -11,6 +11,7 @@
   "directories": {
       "lib": "./lib"
   },
+  "main": "./lib",
   "dependencies": {},
   "devDependencies": {
     "grunt": "0.4.1",
@@ -27,6 +28,6 @@
     "test": "grunt test"
   },
   "engines": {
-    "node": "*"
+    "node": ">=0.6.1"
   }
 }
