@@ -2,11 +2,14 @@
   "author": "Max Englander <max.englander@gmail.com> (http://maxenglander.com)",
   "name": "decisionlog-core",
   "description": "A tool for tracking and evaluating decisions",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "license": "BSD",
   "repository": {
     "type": "git",
     "url": "git://github.com/maxenglander/decisionlog"
+  },
+  "directories": {
+      "lib": "./lib"
   },
   "dependencies": {},
   "devDependencies": {
