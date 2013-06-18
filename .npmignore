@@ -1,4 +1,6 @@
+bower.json
 build/
+dist/amd/
 Gruntfile.coffee
 *.log
 spec/

@@ -1,2 +1,2 @@
-import './model/entry' as Entry
-export { Entry }
+import './model' as model
+export = { model }

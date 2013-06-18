@@ -7,8 +7,7 @@ module.exports = (grunt) ->
 
     grunt.initConfig
         clean:
-            compile: 'build/'
-            release: 'lib/'
+            build: 'build/'
         coffee:
             options:
                 bare: true
@@ -19,35 +18,46 @@ module.exports = (grunt) ->
                 dest: 'build/js/',
                 ext: '.js',
         copy:
-            release:
+            all:
                 files: [ {
                     expand: true,
-                    cwd: 'build/js',
+                    cwd: 'build/js/',
                     src: [ '**/*.js', '!**/*_spec.js' ]
-                    dest: 'lib/'
+                    dest: 'dist/'
                 } ]
         simplemocha:
             options:
+                compilers: {
+                    'coffee': 'coffee-script'
+                },
                 ui: 'bdd'
             all:
                 src: [
-                    'build/js/**/*.js',
+                    'build/coffee/cjs/**/*.coffee',
                 ]
         transpile:
-            all:
+            amd:
+                type: 'amd',
+                files: [ {
+                    expand: true,
+                    cwd: 'src/',
+                    src: [ '**/*.coffee', '!**/index.coffee' ],
+                    dest: 'build/coffee/amd/'
+                } ]
+            cjs:
                 type: 'cjs'
                 files: [ {
                     expand: true,
                     cwd: 'src/',
                     src: [ '**/*.coffee' ],
-                    dest: 'build/coffee'
+                    dest: 'build/coffee/cjs/'
                 }, {
                     expand: true,
                     cwd: 'spec/',
                     src: [ '**/*.coffee' ],
-                    dest: 'build/coffee'
+                    dest: 'build/coffee/cjs/'
                 } ]
 
-    grunt.registerTask 'build', [ 'clean', 'transpile', 'coffee' ]
+    grunt.registerTask 'build', [ 'transpile', 'coffee' ]
     grunt.registerTask 'release', [ 'clean', 'build', 'copy' ]
-    grunt.registerTask 'test', [ 'clean', 'transpile', 'coffee', 'simplemocha' ]
+    grunt.registerTask 'test', [ 'build', 'simplemocha' ]
