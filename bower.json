@@ -3,6 +3,12 @@
     "version": "0.0.0",
     "main": "dist/amd/",
     "ignore": [
-        "!dist/amd/"
+        ".gitignore",
+        ".npmignore",
+        "dist/cjs/",
+        "Gruntfile.coffee",
+        "package.json",
+        "spec/"
+        "src/"
     ]
 }
