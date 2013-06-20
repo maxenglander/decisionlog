@@ -8,7 +8,7 @@
         "dist/cjs/",
         "Gruntfile.coffee",
         "package.json",
-        "spec/"
+        "spec/",
         "src/"
     ]
 }
