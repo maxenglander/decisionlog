@@ -6,11 +6,11 @@
   "license": "BSD",
   "repository": {
     "type": "git",
-    "url": "git://github.com/maxenglander/decisionlog"
+    "url": "git://github.com/maxenglander/decisionlog-core"
   },
-  "main": "dist/cjs/index.js",
+  "main": "dist/cjs/decisionlog/core/index.js",
   "files": [
-      "dist/cjs/"
+      "dist/cjs/decisionlog/core"
   ],
   "dependencies": {},
   "devDependencies": {

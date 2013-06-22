@@ -1,4 +1,4 @@
-define("model/entry", [], function() {
+define("decisionlog/core/model/entry", [], function() {
   "use strict";
   var Entry;
   Entry = (function() {
