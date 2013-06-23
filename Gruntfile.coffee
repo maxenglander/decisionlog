@@ -3,6 +3,7 @@ module.exports = (grunt) ->
     grunt.loadNpmTasks 'grunt-contrib-coffee'
     grunt.loadNpmTasks 'grunt-contrib-copy'
     grunt.loadNpmTasks 'grunt-es6-module-transpiler'
+    grunt.loadNpmTasks 'grunt-requirejs'
     grunt.loadNpmTasks 'grunt-simple-mocha'
 
     grunt.initConfig
@@ -18,13 +19,19 @@ module.exports = (grunt) ->
                 dest: 'build/js/',
                 ext: '.js',
         copy:
-            all:
+            cjs:
                 files: [ {
                     expand: true,
-                    cwd: 'build/js/',
+                    cwd: 'build/js/cjs/',
                     src: [ '**/*.js', '!**/*_spec.js' ]
-                    dest: 'dist/'
+                    dest: 'lib/'
                 } ]
+        requirejs:
+            compile:
+                options:
+                    baseUrl: 'build/js/amd/',
+                    name: 'decisionlog/core'
+                    out: 'decisionlog-core.js'
         simplemocha:
             options:
                 compilers: {
@@ -41,7 +48,7 @@ module.exports = (grunt) ->
                 files: [ {
                     expand: true,
                     cwd: 'src/',
-                    src: [ '**/*.coffee', '!**/index.coffee' ],
+                    src: [ '**/*.coffee' ],
                     dest: 'build/coffee/amd/'
                 } ]
             cjs:
@@ -59,5 +66,5 @@ module.exports = (grunt) ->
                 } ]
 
     grunt.registerTask 'build', [ 'transpile', 'coffee' ]
-    grunt.registerTask 'release', [ 'clean', 'build', 'copy' ]
+    grunt.registerTask 'release', [ 'clean', 'build', 'copy:cjs', 'requirejs' ]
     grunt.registerTask 'test', [ 'build', 'simplemocha' ]

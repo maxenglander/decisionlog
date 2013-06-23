@@ -1,12 +1,12 @@
 {
     "name": "decisionlog-core",
     "version": "0.0.0",
-    "main": "dist/amd/",
+    "main": "decisionlog-core.js",
     "ignore": [
         ".gitignore",
         ".npmignore",
-        "dist/cjs/",
         "Gruntfile.coffee",
+        "lib/",
         "package.json",
         "spec/",
         "src/"
