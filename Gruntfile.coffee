@@ -1,9 +1,7 @@
 module.exports = (grunt) ->
+    grunt.loadTasks './tasks'
     grunt.loadNpmTasks 'grunt-contrib-clean'
     grunt.loadNpmTasks 'grunt-contrib-coffee'
-    grunt.loadNpmTasks 'grunt-contrib-copy'
-    grunt.loadNpmTasks 'grunt-es6-module-transpiler'
-    grunt.loadNpmTasks 'grunt-requirejs'
     grunt.loadNpmTasks 'grunt-simple-mocha'
 
     grunt.initConfig
@@ -14,24 +12,10 @@ module.exports = (grunt) ->
                 bare: true
             all:
                 expand: true,
-                cwd: 'build/coffee',
+                cwd: 'build/',
                 src: [ '**/*.coffee' ],
-                dest: 'build/js/',
+                dest: './',
                 ext: '.js',
-        copy:
-            cjs:
-                files: [ {
-                    expand: true,
-                    cwd: 'build/js/cjs/',
-                    src: [ '**/*.js', '!**/*_spec.js' ]
-                    dest: 'lib/'
-                } ]
-        requirejs:
-            compile:
-                options:
-                    baseUrl: 'build/js/amd/',
-                    name: 'decisionlog/core'
-                    out: 'decisionlog-core.js'
         simplemocha:
             options:
                 compilers: {
@@ -39,32 +23,17 @@ module.exports = (grunt) ->
                 },
                 ui: 'bdd'
             all:
-                src: [
-                    'build/coffee/cjs/**/*.coffee',
-                ]
-        transpile:
-            amd:
-                type: 'amd',
-                files: [ {
-                    expand: true,
-                    cwd: 'src/',
-                    src: [ '**/*.coffee' ],
-                    dest: 'build/coffee/amd/'
-                } ]
-            cjs:
-                type: 'cjs'
-                files: [ {
-                    expand: true,
-                    cwd: 'src/',
-                    src: [ '**/*.coffee' ],
-                    dest: 'build/coffee/cjs/'
-                }, {
-                    expand: true,
-                    cwd: 'spec/',
-                    src: [ '**/*.coffee' ],
-                    dest: 'build/coffee/cjs/'
-                } ]
+                src: [ 'build/**/*.coffee', 'spec/**/*.coffee' ]
+        wrap:
+            options:
+                header: 'umd/begin.frag',
+                footer: 'umd/end.frag'
+            src:
+                expand: true
+                cwd: 'src/'
+                src: [ '**/*.coffee' ]
+                dest: 'build/'
 
-    grunt.registerTask 'build', [ 'transpile', 'coffee' ]
-    grunt.registerTask 'release', [ 'clean', 'build', 'copy:cjs', 'requirejs' ]
+    grunt.registerTask 'build', [ 'wrap', 'coffee' ]
+    grunt.registerTask 'release', [ 'clean', 'build' ]
     grunt.registerTask 'test', [ 'build', 'simplemocha' ]

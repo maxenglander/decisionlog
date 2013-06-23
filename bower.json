@@ -1,14 +1,14 @@
 {
     "name": "decisionlog-core",
     "version": "0.0.0",
-    "main": "decisionlog-core.js",
     "ignore": [
         ".gitignore",
         ".npmignore",
         "Gruntfile.coffee",
-        "lib/",
         "package.json",
         "spec/",
-        "src/"
+        "src/",
+        "tasks",
+        "umd/"
     ]
 }

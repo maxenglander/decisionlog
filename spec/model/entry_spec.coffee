@@ -1,5 +1,5 @@
-import "./entry" as Entry
-import "assert" as assert
+assert = require('assert')
+Entry = require('../../build/model/entry')
 
 describe 'Entry', ->
     expectedAnswer = "That is the question"
